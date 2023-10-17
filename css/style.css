@@ -1,32 +1,132 @@
-body{
-    background-color: #f5f5f5;
+body {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
     color: #212529;
     text-align: left;
-    margin: 0;
+    margin:0px;
     padding: 0;
     overflow-x: hidden;
+    background-image: url('taustakuva2.jpg'); /* Replace 'path-to-your-image.jpg' with the actual path to your image */
+    background-size: cover; /* Ensure the image covers the entire background */
+    background-repeat: no-repeat; /* Prevent image repetition */
+    background-attachment: fixed; /* Keep the image fixed in the viewport */
 }
 
-h1{
+
+h1 {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
-    margin: 0;
+    margin:0;
     padding: 0;
     text-align: center;
 }
 
-p{
+h2 {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
+    margin:3px;
+    padding: 0;
+    text-align: left;
+    color:#124ada;
+}
+h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 200;
+    margin:3px;
+    margin-left: 5px;
+    padding: 0;
+    text-align: left;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    margin:5px;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.pictures{
+
+    max-width: 50%;
+    padding: 50px;
+    margin-left: 100px;
+}
+
+.pictures img{
+     margin: 30px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh; /* Centers the container vertically on the screen */
+}
+
+section {
+    text-align: center;
+}
+
+form {
+    max-width: 75px; /* Adjust the maximum width as needed */
+    width: 100%;
+    padding: 20px;
+}
+
+
+/* CSS style for the navigation bar */
+.navbar {
+    background-color: #5e7282; /* Background color for the navbar */
+    overflow: hidden;
+}
+
+.navbar ul {
+    list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-img{
-    max-width: 100%;
-    height: auto;
+.navbar li {
+    float:left;
+}
+
+.navbar li a {
+    display: block;
+    color: white; /* Text color for the links */
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Style when you hover over the links */
+.navbar li a:hover {
+    background-color: #ddd; /* Background color on hover */
+    color: black; /* Text color on hover */
+}
+
+/* Style the hobby table */
+.hobby-table {
+    width: 80%; /* Adjust the width as needed */
+    margin: 20px auto; /* Center the table on the page and add space around it */
+    border-collapse: collapse; /* Collapse cell borders for a cleaner look */
+}
+
+.hobby-table th, .hobby-table td {
+    padding: 10px; /* Add padding to cells for spacing */
+    text-align: left;
+}
+
+.hobby-table th {
+    background-color: #f2f2f2; /* Light gray background for header cells */
+}
+
+.hobby-table tr:nth-child(even) {
+    background-color: #f9f9f9; /* Alternate row background color for better readability */
 }
