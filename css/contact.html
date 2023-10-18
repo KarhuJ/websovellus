@@ -29,7 +29,7 @@
     <div class="container">
         <section>
             <h5>Contact Form</h5>
-            <form action="process_contact.php" method="post" onsubmit="return handleSubmit();">
+            <form action="process_contact.php" method="post" onsubmit="return handleSubmit(event);">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
                 
@@ -39,7 +39,7 @@
                 <label for="question">Your Question:</label>
                 <textarea id="question" name="question" rows="4" required></textarea>
                 
-                <input type="submit" value="Submit">
+                <input type="submit" value="Submit" id="submitButton">
             </form>
         </section>
     </div>
@@ -55,15 +55,20 @@
         document.getElementById("name").textContent = personalInfo.name;
         document.querySelector(".email-link").textContent = personalInfo.email;
 
-        function handleSubmit() {
-            // Simulate form submission (You should replace this with your actual form submission logic)
-            const isSubmitted = true; // Set this to true on successful submission
+        function handleSubmit(event) {
+            // Prevent the default form submission behavior
+            event.preventDefault();
 
-            if (isSubmitted) {
+            // Check if all form fields are filled
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const question = document.getElementById("question").value;
+
+            if (name && email && question) {
                 alert("Thank You.");
                 return true; // Allow the form to submit
             } else {
-                alert("Submit Failed.");
+                alert("Submit Failed. Please fill in all fields.");
                 return false; // Prevent the form from submitting
             }
         }
