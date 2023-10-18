@@ -1,4 +1,4 @@
-const apiKey = 'c42cb5c4b243021b00364538a361e06b';
+const apiKey = process.env.OPENWEATHERMAP_API_KEY;
 
 // Function to fetch and display weather
 function fetchAndDisplayWeather(city) {
