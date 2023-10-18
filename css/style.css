@@ -5,7 +5,7 @@ body {
     line-height: 1.5;
     color: #212529;
     text-align: left;
-    margin:0px;
+    margin:20px;
     padding: 0;
     overflow-x: hidden;
     background-image: url('taustakuva2.jpg'); /* Replace 'path-to-your-image.jpg' with the actual path to your image */
@@ -57,7 +57,7 @@ p {
     padding: 0;
 }
 
-ul {
+ul{
     text-align: left;
 }
 
