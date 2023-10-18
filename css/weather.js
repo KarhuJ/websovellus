@@ -1,8 +1,12 @@
-// Replace 'YOUR_API_KEY' with your actual OpenWeatherMap API key
 const apiKey = 'c42cb5c4b243021b00364538a361e06b';
-const city = 'Oulu'; // Replace with your desired city
 
-function fetchWeather() {
+// Function to fetch and display weather
+function fetchAndDisplayWeather(city) {
+    if (!apiKey) {
+        console.error('API key is missing. Please set it as an environment variable.');
+        return;
+    }
+
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
     fetch(apiUrl)
@@ -21,8 +25,17 @@ function fetchWeather() {
         });
 }
 
-// Update weather every 30 minutes (in milliseconds)
-setInterval(fetchWeather, 600000);
+// Add an event listener to the "Show Weather" button
+document.getElementById('showWeatherButton').addEventListener('click', function() {
+    // Get the city entered by the user
+    const city = document.getElementById('cityInput').value;
+    
+    // Fetch and display weather for the chosen city
+    fetchAndDisplayWeather(city);
+    
+    // Show the weather container
+    document.getElementById('weather-container').style.display = 'block';
+});
 
-// Initial call to fetch weather
-fetchWeather();
+// Initially hide the weather container
+document.getElementById('weather-container').style.display = 'none';
