@@ -50,28 +50,29 @@
             name: "Jyri Karhu",
             email: "jyri.karhu@gmail.com",
         };
-
+    
         // Access the "name" and "email" elements and set their content
         document.getElementById("name").textContent = personalInfo.name;
         document.querySelector(".email-link").textContent = personalInfo.email;
-
+    
         function handleSubmit(event) {
             // Prevent the default form submission behavior
             event.preventDefault();
-
+    
             // Check if all form fields are filled
             const name = document.getElementById("name").value;
             const email = document.getElementById("email").value;
             const question = document.getElementById("question").value;
-
+    
             if (name && email && question) {
                 alert("Thank You.");
+                // Redirect to Home.html
                 window.location.href = "Home.html";
             } else {
                 alert("Submit Failed. Please fill in all fields.");
             }
         }
-    </script>
+    </script>    
 </body>
 </html>
 
