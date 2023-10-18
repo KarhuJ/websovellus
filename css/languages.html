@@ -22,12 +22,27 @@
 
     <section>
         <h2>Languages and Skills</h2>
-        <ul>
-            <li><strong>Languages:</strong> English (Native)</li>
-            <li><strong>Programming Languages:</strong> HTML, CSS, JavaScript, Java</li>
-            <li><strong>Database:</strong> SQL</li>
-            <li><strong>Version Control:</strong> Git</li>
-           
-        </ul>
+        <ul id="languagesAndSkillsList"></ul>
     </section>
+
+    <script>
+        const languagesAndSkills = {
+            languages: "English (Native)",
+            programmingLanguages: "HTML, CSS, JavaScript, Java",
+            database: "SQL",
+            versionControl: "Git"
+        };
+
+        const listContainer = document.getElementById("languagesAndSkillsList");
+
+        for (const key in languagesAndSkills) {
+            if (languagesAndSkills.hasOwnProperty(key)) {
+                const listItem = document.createElement("li");
+                listItem.innerHTML = `<strong>${key}:</strong> ${languagesAndSkills[key]}`;
+                listContainer.appendChild(listItem);
+            }
+        }
+    </script>
+</body>
+
     
