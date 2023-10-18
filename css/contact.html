@@ -10,15 +10,18 @@
     <header>
         <h1>Contact</h1>
     </header>
+
     <div class="navbar">
         <ul>
             <li><a href="Home.html">Home</a></li>
             <li><a href="Hobbies.html">Hobbies</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="languages.html">Languages</a></li>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </div>
+
     <section>
         <h5>Contact info</h5>
         <p>
@@ -50,11 +53,8 @@
             event.preventDefault();
 
             // Check if all form fields are filled
-            const name = document.getElementById("name").value;
-            const email = document.getElementById("email").value;
-            const question = document.getElementById("question").value;
 
-            if (name && email && question) {
+            if (form.checkValidity()) {
                 alert("Thank You.");
                 window.location.href = "Home.html"; // Redirect to Home.html
             } else {
