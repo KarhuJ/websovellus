@@ -10,12 +10,22 @@
             email: "jyri.karhu@.com",
             summary: "A passionate individual with a love for various hobbies and a creative mind.",
         };
+
+        // Function to display the current time
+        function displayTime() {
+            const currentTime = new Date();
+            const hours = currentTime.getHours();
+            const minutes = currentTime.getMinutes();
+            const seconds = currentTime.getSeconds();
+            const timeString = `${hours}:${minutes}:${seconds}`;
+            alert(`Current time is: ${timeString}`);
+        }
     </script>
-    
 </head>
 <body>
     <header>
         <h1>Jyri Karhu</h1>
+        <button onclick="displayTime()">Time</button> <!-- Button to display current time -->
     </header>
 
     <div class="navbar">
@@ -33,10 +43,11 @@
         <p>
             Hello, I'm <span id="name"></span>. I'm a passionate individual with a love for various hobbies and a creative mind. I have a strong portfolio of projects in different areas and enjoy sharing my experiences through my gallery.
         </p>
+        <button onclick="displayTime()">Time</button> <!-- Button to display current time -->
     </section>
     <script>
         document.getElementById("name").textContent = personalInfo.name;
     </script>
-    
 </body>
 </html>
+

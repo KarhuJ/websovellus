@@ -22,14 +22,14 @@
     <section>
         <h5>Contact info</h5>
         <p>
-            Hello, I'm <span id="name"></span>. You can reach out to me at <a id="email" href="mailto:" class="email-link"></a>.
+            Hello, I'm <span id="name">Jyri Karhu</span>. You can reach out to me at <a id="email" href="mailto:jyri.karhu@gmail.com" class="email-link">jyri.karhu@gmail.com</a>.
         </p>
     </section>
 
     <div class="container">
         <section>
             <h5>Contact Form</h5>
-            <form action="process_contact.php" method="post" onsubmit="return handleSubmit(event);">
+            <form action="Home.html" method="post" onsubmit="return handleSubmit(event);">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
                 
@@ -45,26 +45,22 @@
     </div>
     
     <script>
-        // Access the "name" and "email" elements and set their content
-        document.getElementById("name").textContent = "Your Name";
-        document.querySelector(".email-link").textContent = "your@email.com";
-
         function handleSubmit(event) {
             // Prevent the default form submission behavior
             event.preventDefault();
 
-            // Check if the email is in a valid format
+            // Check if all form fields are filled
+            const name = document.getElementById("name").value;
             const email = document.getElementById("email").value;
-            if (!isValidEmail(email)) {
-                alert("Invalid email format. Please enter a valid email address.");
-                return false; // Prevent the form from submitting
+            const question = document.getElementById("question").value;
+
+            if (name && email && question) {
+                alert("Thank You.");
+                window.location.href = "Home.html"; // Redirect to Home.html
+            } else {
+                alert("Submit Failed. Please fill in all fields.");
             }
-
-            // All other fields can be any user input
-
-            alert("Thank You.");
-            return true; // Allow the form to submit
         }
-
-        // Function to validate email
-
+    </script>
+</body>
+</html>
