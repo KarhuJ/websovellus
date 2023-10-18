@@ -9,6 +9,7 @@
 <body>
     <header>
         <h1>Portfolio</h1>
+        <div id="time-display" class="time-display"></div>
     </header>
     
     <div class="navbar">
@@ -32,4 +33,20 @@
             <li><a href="https://github.com/yourusername/project3" target="_blank">Project 3</a></li>-->
         </ul>
     </section>
+
+    <script>
+        function displayTime() {
+            const timeDisplay = document.getElementById("time-display");
+            const currentTime = new Date();
+            const formattedTime = currentTime.toLocaleTimeString();
+            timeDisplay.textContent = formattedTime;
+        }
+    
+        setInterval(displayTime, 1000);
+        displayTime();
+    </script>
+
+</body>
+</html>
+
     

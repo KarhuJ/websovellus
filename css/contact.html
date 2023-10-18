@@ -9,6 +9,7 @@
 <body>
     <header>
         <h1>Contact</h1>
+        <div id="time-display" class="time-display"></div>
     </header>
 
     <div class="navbar">
@@ -62,5 +63,18 @@
             }
         }
     </script>
+
+    <script>
+        function displayTime() {
+            const timeDisplay = document.getElementById("time-display");
+            const currentTime = new Date();
+            const formattedTime = currentTime.toLocaleTimeString();
+            timeDisplay.textContent = formattedTime;
+        }
+
+        setInterval(displayTime, 1000);
+        displayTime();
+    </script>
+
 </body>
 </html>
