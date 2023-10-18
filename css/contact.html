@@ -45,34 +45,26 @@
     </div>
     
     <script>
-        // Define the personalInfo array
-        const personalInfo = {
-            name: "Jyri Karhu",
-            email: "jyri.karhu@gmail.com",
-        };
-    
         // Access the "name" and "email" elements and set their content
-        document.getElementById("name").textContent = personalInfo.name;
-        document.querySelector(".email-link").textContent = personalInfo.email;
-    
+        document.getElementById("name").textContent = "Your Name";
+        document.querySelector(".email-link").textContent = "your@email.com";
+
         function handleSubmit(event) {
             // Prevent the default form submission behavior
             event.preventDefault();
-    
-            // Check if all form fields are filled
-            const name = document.getElementById("name").value;
+
+            // Check if the email is in a valid format
             const email = document.getElementById("email").value;
-            const question = document.getElementById("question").value;
-    
-            if (name && email && question) {
-                alert("Thank You.");
-                // Redirect to Home.html
-                window.location.href = "Home.html";
-            } /*else {
-                alert("Submit Failed. Please fill in all fields.");
-            }*/
+            if (!isValidEmail(email)) {
+                alert("Invalid email format. Please enter a valid email address.");
+                return false; // Prevent the form from submitting
+            }
+
+            // All other fields can be any user input
+
+            alert("Thank You.");
+            return true; // Allow the form to submit
         }
-    </script>    
-</body>
-</html>
+
+        // Function to validate email
 
