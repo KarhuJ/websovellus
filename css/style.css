@@ -150,4 +150,10 @@ form {
 }
 button{
     object-position: right;
+    background-color: #5e7282;
+    color: #ffffff;
+}
+button:hover{
+    background-color: #ddd;
+    color: black; 
 }
