@@ -33,11 +33,11 @@ h2 {
 }
 h3 {
     font-family: 'Roboto', sans-serif;
-    font-weight: 200;
     margin:3px;
     margin-left: 5px;
     padding: 0;
     text-align: left;
+    color:#212529;
 }
 
 h4{
@@ -61,13 +61,9 @@ ul{
     text-align: left;
 }
 
-.hobby-table {
-    width: 100%;
-    margin: 20px auto;
-    border-collapse: collapse;
-}
 
-.pictures{
+
+/*.pictures{
     padding: 50px;
     margin-left: 100px;
 }
@@ -76,7 +72,7 @@ ul{
      margin: 30px;
      padding: 10px;
      max-width: 100%;
-}
+}*/
 
 .container {
     display: flex;
@@ -137,4 +133,3 @@ form {
     padding: 10px; 
     text-align: left;
 }
-
