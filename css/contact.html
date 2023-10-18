@@ -20,7 +20,7 @@
         </ul>
     </div>
     <section>
-        <h5>Contact info</h2>
+        <h5>Contact info</h5>
         <p>
             Hello, I'm <span id="name"></span>. You can reach out to me at <a id="email" href="mailto:" class="email-link"></a>.
         </p>
@@ -29,7 +29,7 @@
     <div class="container">
         <section>
             <h5>Contact Form</h5>
-            <form action="process_contact.php" method="post">
+            <form action="process_contact.php" method="post" onsubmit="return handleSubmit();">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
                 
@@ -54,6 +54,20 @@
         // Access the "name" and "email" elements and set their content
         document.getElementById("name").textContent = personalInfo.name;
         document.querySelector(".email-link").textContent = personalInfo.email;
+
+        function handleSubmit() {
+            // Simulate form submission (You should replace this with your actual form submission logic)
+            const isSubmitted = true; // Set this to true on successful submission
+
+            if (isSubmitted) {
+                alert("Thank You.");
+                return true; // Allow the form to submit
+            } else {
+                alert("Submit Failed.");
+                return false; // Prevent the form from submitting
+            }
+        }
     </script>
 </body>
 </html>
+
