@@ -1,7 +1,7 @@
 # websovellus
 
 Basic HTML structure on käytetty kaikilla välilehdillä samoin kuin listoja otsikoita etc.
-HTML formia käytin contact välilehdessä. Mediaa ja linkkejä löytyy portfolio,galleria ja contacts välilehdistä. Tables löytyy hobbies välilehdeltä jossa harrastukset on laitettu taulukkoon.
+HTML formia käytin contact välilehdessä. Mediaa ja linkkejä löytyy portfolio,galleria ja contacts välilehdistä. portfolio cälilehdessä on linkki aikasempaan projektiini ja contact välilehdessä on mailto linkki mistä pääsee suoraan laittaam s-postia minulle. Tables löytyy hobbies välilehdeltä jossa harrastukset on laitettu taulukkoon.
 
 CSS tyylejä löytyy style.css filusta jossa on muokattu CSS-valitsimia,taustoja, fontteja, mediaa etc. Responsiivistä suunnittelua on jonkin verran esim kännykälle skaalaus on välilehdissä olemassa ja hobbies välilehdessä on taulukon skaalaus laitettu. Galleryssä on kuvat laitettu Grid-containeriin ku en muutakaan keksiny. Siellä on leikitty tyyleillä taustakuvilla väreillä etc. Napit esim. vaihtaa väriä hover ominaisuudella. Displayssä on käytetty ainakin flexiä ja blockia. Myös sää ruudukko on tehty containeriin.
 
