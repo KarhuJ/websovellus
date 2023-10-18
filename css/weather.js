@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const apiKey = process.env.OPENWEATHERMAP_API_KEY;
 
 // Function to fetch and display weather
