@@ -19,6 +19,14 @@ function fetchAndDisplayWeather(city) {
             document.getElementById('city').textContent = cityName;
             document.getElementById('temperature').textContent = temperature;
             document.getElementById('conditions').textContent = weatherConditions;
+
+            // Show the weather container
+            document.getElementById('weather-container').style.display = 'block';
+
+            // Set a timer to hide the weather after 1 minute (60000 milliseconds)
+            setTimeout(() => {
+                document.getElementById('weather-container').style.display = 'none';
+            }, 60000);
         })
         .catch(error => {
             console.error('Error fetching weather data: ', error);
@@ -32,9 +40,6 @@ document.getElementById('showWeatherButton').addEventListener('click', function(
     
     // Fetch and display weather for the chosen city
     fetchAndDisplayWeather(city);
-    
-    // Show the weather container
-    document.getElementById('weather-container').style.display = 'block';
 });
 
 // Initially hide the weather container
