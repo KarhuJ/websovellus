@@ -5,6 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet" type="text/css">
     <title>Jyri Karhu - CV</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr; /* One column */
+            grid-gap: 10px; /* Adjust the gap as needed */
+        }
+
+        .pictures {
+            text-align: center; /* Center the images horizontally */
+        }
+
+        .pictures img {
+            max-width: 100%; /* Make sure images don't exceed their container */
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -20,9 +35,14 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </div>
-    <div class="pictures">
-        <img src="DLL_History.png">
-        <img src="Database.png">
+
+    <div class="grid-container">
+        <div class="pictures">
+            <img src="DLL_History.png">
+        </div>
+        <div class="pictures">
+            <img src="Database.png">
+        </div>
     </div>
 </body>
 </html>
