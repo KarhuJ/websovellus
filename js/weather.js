@@ -1,6 +1,4 @@
-require('dotenv').config();
-
-const apiKey = process.env.OPENWEATHERMAP_API_KEY;
+const apiKey = 'c42cb5c4b243021b00364538a361e06b'
 
 // Function to fetch and display weather
 function fetchAndDisplayWeather(city) {

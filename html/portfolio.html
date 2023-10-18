@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="/websovellus/css/style.css" rel="stylesheet" type="text/css">
     <title>Jyri Karhu - CV</title>
 </head>
 <body>
     <header>
-        <h1>Hobbies</h1>
+        <h1>Portfolio</h1>
         <div id="time-display" class="time-display"></div>
     </header>
-
+    
     <div class="navbar">
         <ul>
             <li><a href="Home.html">Home</a></li>
@@ -25,44 +25,29 @@
 
     <section>
         <h3>
-            Here are some of my hobbies in a table:
+            Here are some of the projects I've worked on:
         </h3>
+        <ul>
+            <li><a href="https://github.com/Banksimul2023-22SPL/group_1" target="_blank">BankSimulator-project</a></li>
+            <!--<li><a href="https://github.com/yourusername/project2" target="_blank">Project 2</a></li>
+            <li><a href="https://github.com/yourusername/project3" target="_blank">Project 3</a></li>-->
+        </ul>
     </section>
 
-    <table class="hobby-table">
-        <tr>
-            <th>Hobby</th>
-            <th>Description</th>
-        </tr>
-        <tr>
-            <td>Hunting</td>
-            <td>Hunting is one of my favorite hobbies.</td>
-        </tr>
-        <tr>
-            <td>Reading Books</td>
-            <td>Reading books is a great way to relax and learn.</td>
-        </tr>
-        <tr>
-            <td>Video Games</td>
-            <td>Playing video games is a fun and immersive pastime.</td>
-        </tr>
-    </table>
-
     <script>
-        // Function to update and display the time
         function displayTime() {
             const timeDisplay = document.getElementById("time-display");
             const currentTime = new Date();
             const formattedTime = currentTime.toLocaleTimeString();
             timeDisplay.textContent = formattedTime;
         }
-
+    
         setInterval(displayTime, 1000);
         displayTime();
     </script>
 
-<button id="showWeatherButton">Show Weather</button>
-<input type="text" id="cityInput" placeholder="Enter city name">
+    <button id="showWeatherButton">Show Weather</button>
+    <input type="text" id="cityInput" placeholder="Enter city name">
 
     <div id="weather-container">
         <h3>Current Weather</h3>
@@ -70,7 +55,9 @@
         <p>Temperature: <span id="temperature"></span>&deg;C</p>
         <p>Conditions: <span id="conditions"></span></p>
     </div>
-    <script src="weather.js"></script>
+    <script src="/websovellus/js/weather.js"></script>
 
 </body>
 </html>
+
+    

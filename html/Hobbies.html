@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="/websovellus/css/style.css" rel="stylesheet" type="text/css">
     <title>Jyri Karhu - CV</title>
 </head>
 <body>
     <header>
-        <h1>Languages</h1>
+        <h1>Hobbies</h1>
         <div id="time-display" class="time-display"></div>
     </header>
-    
+
     <div class="navbar">
         <ul>
             <li><a href="Home.html">Home</a></li>
@@ -24,30 +24,32 @@
     </div>
 
     <section>
-        <h2>Languages and Skills</h2>
-        <ul id="languagesAndSkillsList"></ul>
+        <h3>
+            Here are some of my hobbies in a table:
+        </h3>
     </section>
 
+    <table class="hobby-table">
+        <tr>
+            <th>Hobby</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>Hunting</td>
+            <td>Hunting is one of my favorite hobbies.</td>
+        </tr>
+        <tr>
+            <td>Reading Books</td>
+            <td>Reading books is a great way to relax and learn.</td>
+        </tr>
+        <tr>
+            <td>Video Games</td>
+            <td>Playing video games is a fun and immersive pastime.</td>
+        </tr>
+    </table>
+
     <script>
-        const languagesAndSkills = {
-            languages: "Finnish (Native), English (Fluent)",
-            programmingLanguages: "HTML, CSS, JavaScript, Java",
-            database: "SQL",
-            versionControl: "Git"
-        };
-
-        const listContainer = document.getElementById("languagesAndSkillsList");
-
-        for (const key in languagesAndSkills) {
-            if (languagesAndSkills.hasOwnProperty(key)) {
-                const listItem = document.createElement("li");
-                listItem.innerHTML = `<strong>${key}:</strong> ${languagesAndSkills[key]}`;
-                listContainer.appendChild(listItem);
-            }
-        }
-    </script>
-
-    <script>
+        // Function to update and display the time
         function displayTime() {
             const timeDisplay = document.getElementById("time-display");
             const currentTime = new Date();
@@ -59,9 +61,8 @@
         displayTime();
     </script>
 
-    <button id="showWeatherButton">Show Weather</button>
-    <input type="text" id="cityInput" placeholder="Enter city name">
-
+<button id="showWeatherButton">Show Weather</button>
+<input type="text" id="cityInput" placeholder="Enter city name">
 
     <div id="weather-container">
         <h3>Current Weather</h3>
@@ -69,8 +70,7 @@
         <p>Temperature: <span id="temperature"></span>&deg;C</p>
         <p>Conditions: <span id="conditions"></span></p>
     </div>
-    <script src="weather.js"></script>
+    <script src="/websovellus/js/weather.js"></script>
 
 </body>
 </html>
-    

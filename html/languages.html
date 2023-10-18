@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="/websovellus/css/style.css" rel="stylesheet" type="text/css">
     <title>Jyri Karhu - CV</title>
 </head>
 <body>
     <header>
-        <h1>Portfolio</h1>
+        <h1>Languages</h1>
         <div id="time-display" class="time-display"></div>
     </header>
     
@@ -24,15 +24,28 @@
     </div>
 
     <section>
-        <h3>
-            Here are some of the projects I've worked on:
-        </h3>
-        <ul>
-            <li><a href="https://github.com/Banksimul2023-22SPL/group_1" target="_blank">BankSimulator-project</a></li>
-            <!--<li><a href="https://github.com/yourusername/project2" target="_blank">Project 2</a></li>
-            <li><a href="https://github.com/yourusername/project3" target="_blank">Project 3</a></li>-->
-        </ul>
+        <h2>Languages and Skills</h2>
+        <ul id="languagesAndSkillsList"></ul>
     </section>
+
+    <script>
+        const languagesAndSkills = {
+            languages: "Finnish (Native), English (Fluent)",
+            programmingLanguages: "HTML, CSS, JavaScript, Java",
+            database: "SQL",
+            versionControl: "Git"
+        };
+
+        const listContainer = document.getElementById("languagesAndSkillsList");
+
+        for (const key in languagesAndSkills) {
+            if (languagesAndSkills.hasOwnProperty(key)) {
+                const listItem = document.createElement("li");
+                listItem.innerHTML = `<strong>${key}:</strong> ${languagesAndSkills[key]}`;
+                listContainer.appendChild(listItem);
+            }
+        }
+    </script>
 
     <script>
         function displayTime() {
@@ -41,7 +54,7 @@
             const formattedTime = currentTime.toLocaleTimeString();
             timeDisplay.textContent = formattedTime;
         }
-    
+
         setInterval(displayTime, 1000);
         displayTime();
     </script>
@@ -49,15 +62,15 @@
     <button id="showWeatherButton">Show Weather</button>
     <input type="text" id="cityInput" placeholder="Enter city name">
 
+
     <div id="weather-container">
         <h3>Current Weather</h3>
         <p>City: <span id="city"></span></p>
         <p>Temperature: <span id="temperature"></span>&deg;C</p>
         <p>Conditions: <span id="conditions"></span></p>
     </div>
-    <script src="weather.js"></script>
+    <script src="/websovellus/js/weather.js"></script>
 
 </body>
 </html>
-
     
