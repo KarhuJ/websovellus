@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <title>Jyri Karhu - CV</title>
+</head>
+<body>
+    <header>
+        <h1>Jyri Karhu</h1>
+    </header>
+
+    <div class="navbar">
+        <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="Hobbies.html">Hobbies</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <section id="home">
+        <h2>About Me</h2>
+        <p>
+            Hello, I'm Jyri Karhu. I'm a passionate individual with a love for various hobbies and a creative mind. I have a strong portfolio of projects in different areas and enjoy sharing my experiences through my gallery.
+        </p>
+    </section>
+
+    <section id="hobbies" style="display: none;">
+        <h2>Hobbies</h2>
+        <ul>
+            <li>Hunting</li>
+            <li>Reading books</li>
+            <li>Playing games</li>
+            <li>Jogging</li>
+        </ul>
+    </section>
+
+    <section id="portfolio" style="display: none;">
+        <h2>Portfolio</h2>
+        <p>
+            Here are some of the projects I've worked on:
+        </p>
+        <ul>
+            <li><a href="portfolio.html">Project 1</a></li>
+            <li><a href="portfolio.html">Project 2</a></li>
+            <li><a href="portfolio.html">Project 3</a></li>
+        </ul>
+    </section>
+
+    <section id="gallery" style="display: none;">
+        <h2>Gallery</h2>
+        <p>
+            Explore my gallery to see some of my favorite moments and creations.
+        </p>
+        <ul>
+            <li><a href="gallery.html">Photo Gallery</a></li>
+            <li><a href="gallery.html">Artwork Gallery</a></li>
+        </ul>
+    </section>
+
+    <script>
+        // JavaScript to toggle visibility of sections based on the clicked tab
+        document.querySelector("a[href='home.html']").addEventListener("click", function () {
+            document.getElementById("home").style.display = "block";
+            document.getElementById("hobbies").style.display = "none";
+            document.getElementById("portfolio").style.display = "none";
+            document.getElementById("gallery").style.display = "none";
+        });
+
+        document.querySelector("a[href='Hobbies.html']").addEventListener("click", function () {
+            document.getElementById("home").style.display = "none";
+            document.getElementById("hobbies").style.display = "block";
+            document.getElementById("portfolio").style.display = "none";
+            document.getElementById("gallery").style.display = "none";
+        });
+
+        document.querySelector("a[href='portfolio.html']").addEventListener("click", function () {
+            document.getElementById("home").style.display = "none";
+            document.getElementById("hobbies").style.display = "none";
+            document.getElementById("portfolio").style.display = "block";
+            document.getElementById("gallery").style.display = "none";
+        });
+
+        document.querySelector("a[href='gallery.html']").addEventListener("click", function () {
+            document.getElementById("home").style.display = "none";
+            document.getElementById("hobbies").style.display = "none";
+            document.getElementById("portfolio").style.display = "none";
+            document.getElementById("gallery").style.display = "block";
+        });
+    </script>
+</body>
+</html>
