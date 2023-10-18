@@ -10,7 +10,6 @@
     <header>
         <h1>Contact</h1>
     </header>
-    
     <div class="navbar">
         <ul>
             <li><a href="Home.html">Home</a></li>
@@ -20,9 +19,16 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </div>
+    <section>
+        <h5>Contact info</h2>
+        <p>
+            Hello, I'm <span id="name"></span>. You can reach out to me at <a id="email" href="mailto:" class="email-link"></a>.
+        </p>
+    </section>
+
     <div class="container">
         <section>
-            <h2>Contact Form</h2>
+            <h5>Contact Form</h5>
             <form action="process_contact.php" method="post">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
@@ -37,5 +43,17 @@
             </form>
         </section>
     </div>
+    
+    <script>
+        // Define the personalInfo array
+        const personalInfo = {
+            name: "Jyri Karhu",
+            email: "jyri.karhu@gmail.com",
+        };
+
+        // Access the "name" and "email" elements and set their content
+        document.getElementById("name").textContent = personalInfo.name;
+        document.querySelector(".email-link").textContent = personalInfo.email;
+    </script>
 </body>
 </html>

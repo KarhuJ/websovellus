@@ -25,7 +25,6 @@ h1 {
 
 h2 {
     font-family: 'Roboto', sans-serif;
-    font-weight: 400;
     margin:3px;
     padding: 0;
     text-align: left;
@@ -48,6 +47,15 @@ h4{
     margin-left: 5px;
     padding: 0;
     text-align: center;
+}
+h5{
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    margin:3px;
+    padding: 0;
+    text-align: center;
+    color:#124ada;
+
 }
 
 p {

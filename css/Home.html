@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <link href="style.css" rel="stylesheet" type="text/css">
     <title>Jyri Karhu - CV</title>
+    <script>
+        const personalInfo = {
+            name: "Jyri Karhu",
+            email: "jyri.karhu@.com",
+            summary: "A passionate individual with a love for various hobbies and a creative mind.",
+        };
+    </script>
+    
 </head>
 <body>
     <header>
@@ -23,8 +31,12 @@
     <section id="home">
         <h2>About Me</h2>
         <p>
-            Hello, I'm Jyri Karhu. I'm a passionate individual with a love for various hobbies and a creative mind. I have a strong portfolio of projects in different areas and enjoy sharing my experiences through my gallery.
+            Hello, I'm <span id="name"></span>. I'm a passionate individual with a love for various hobbies and a creative mind. I have a strong portfolio of projects in different areas and enjoy sharing my experiences through my gallery.
         </p>
     </section>
+    <script>
+        document.getElementById("name").textContent = personalInfo.name;
+    </script>
+    
 </body>
 </html>
