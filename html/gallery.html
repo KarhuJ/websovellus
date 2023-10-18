@@ -1,89 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/websovellus/css/style.css" rel="stylesheet" type="text/css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/websovellus/css/style.css" rel="stylesheet" type="text/css" />
     <title>Jyri Karhu - CV</title>
     <style>
-        .grid-container {
-            display: grid;
-            grid-template-columns: 1fr; /* One column */
-            grid-gap: 10px; /* Adjust the gap as needed */
-        }
+      .grid-container {
+        display: grid;
+        grid-template-columns: 1fr; /* One column */
+        grid-gap: 10px; /* Adjust the gap as needed */
+      }
 
-        .pictures {
-            text-align: center; /* Center the images horizontally */
-        }
+      .pictures {
+        text-align: center; /* Center the images horizontally */
+      }
 
-        .pictures img {
-            margin-top: 10px;
-            max-width: 25%; 
-            height: auto;
-        }
-        .pictures:hover {
-            animation: zoom 4s; /* 2s zoom in, 2s stay, 2s zoom out */
-        }
+      .pictures img {
+        margin-top: 10px;
+        max-width: 25%;
+        height: auto;
+      }
+      .pictures:hover {
+        animation: zoom 4s; /* 2s zoom in, 2s stay, 2s zoom out */
+      }
 
-        @keyframes zoom {
-            0%, 100% {
-                transform: scale(1);
-            }
-            25%, 75% {
-                transform: scale(2.5);
-            }
+      @keyframes zoom {
+        0%,
+        100% {
+          transform: scale(1);
         }
+        25%,
+        75% {
+          transform: scale(2.5);
+        }
+      }
     </style>
-    
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1>Gallery</h1>
-        <div id="time-display" class="time-display"></div>
+      <h1>Gallery</h1>
+      <div id="time-display" class="time-display"></div>
     </header>
-    
+
     <div class="navbar">
-        <ul>
-            <li><a href="Home.html">Home</a></li>
-            <li><a href="Hobbies.html">Hobbies</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="languages.html">Languages</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+      <ul>
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="Hobbies.html">Hobbies</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="languages.html">Languages</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </div>
 
     <div class="grid-container">
-        <div class="pictures">
-            <img src="/websovellus/assets/pictures/DLL_History.png">
-        </div>
-        <div class="pictures">
-            <img src="/websovellus/assets/pictures/Database.png">
-        </div>
+      <div class="pictures">
+        <img src="/websovellus/assets/pictures/DLL_History.png" />
+      </div>
+      <div class="pictures">
+        <img src="/websovellus/assets/pictures/Database.png" />
+      </div>
     </div>
 
     <script>
-    function displayTime() {
+      function displayTime() {
         const timeDisplay = document.getElementById("time-display");
         const currentTime = new Date();
         const formattedTime = currentTime.toLocaleTimeString();
         timeDisplay.textContent = formattedTime;
-    }
+      }
 
-    setInterval(displayTime, 1000);
-    displayTime();
-</script>
+      setInterval(displayTime, 1000);
+      displayTime();
+    </script>
 
-<button id="showWeatherButton">Show Weather</button>
-<input type="text" id="cityInput" placeholder="Enter city name">
+    <button id="showWeatherButton">Show Weather</button>
+    <input type="text" id="cityInput" placeholder="Enter city name" />
 
-<div id="weather-container">
-    <h3>Current Weather</h3>
-    <p>City: <span id="city"></span></p>
-    <p>Temperature: <span id="temperature"></span>&deg;C</p>
-    <p>Conditions: <span id="conditions"></span></p>
-</div>
-<script src="/websovellus/js/weather.js"></script>
-
-</body>
+    <div id="weather-container">
+      <h3>Current Weather</h3>
+      <p>City: <span id="city"></span></p>
+      <p>Temperature: <span id="temperature"></span>&deg;C</p>
+      <p>Conditions: <span id="conditions"></span></p>
+    </div>
+    <script src="/websovellus/js/weather.js"></script>
+  </body>
 </html>

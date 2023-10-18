@@ -1,63 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/websovellus/css/style.css" rel="stylesheet" type="text/css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/websovellus/css/style.css" rel="stylesheet" type="text/css" />
     <title>Jyri Karhu - CV</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1>Portfolio</h1>
-        <div id="time-display" class="time-display"></div>
+      <h1>Portfolio</h1>
+      <div id="time-display" class="time-display"></div>
     </header>
-    
+
     <div class="navbar">
-        <ul>
-            <li><a href="Home.html">Home</a></li>
-            <li><a href="Hobbies.html">Hobbies</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="languages.html">Languages</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+      <ul>
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="Hobbies.html">Hobbies</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="languages.html">Languages</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </div>
 
     <section>
-        <h3>
-            Here are some of the projects I've worked on:
-        </h3>
-        <ul>
-            <li><a href="https://github.com/Banksimul2023-22SPL/group_1" target="_blank">BankSimulator-project</a></li>
-            <!--<li><a href="https://github.com/yourusername/project2" target="_blank">Project 2</a></li>
+      <h3>Here are some of the projects I've worked on:</h3>
+      <ul>
+        <li>
+          <a
+            href="https://github.com/Banksimul2023-22SPL/group_1"
+            target="_blank"
+            >BankSimulator-project</a
+          >
+        </li>
+        <!--<li><a href="https://github.com/yourusername/project2" target="_blank">Project 2</a></li>
             <li><a href="https://github.com/yourusername/project3" target="_blank">Project 3</a></li>-->
-        </ul>
+      </ul>
     </section>
 
     <script>
-        function displayTime() {
-            const timeDisplay = document.getElementById("time-display");
-            const currentTime = new Date();
-            const formattedTime = currentTime.toLocaleTimeString();
-            timeDisplay.textContent = formattedTime;
-        }
-    
-        setInterval(displayTime, 1000);
-        displayTime();
+      function displayTime() {
+        const timeDisplay = document.getElementById("time-display");
+        const currentTime = new Date();
+        const formattedTime = currentTime.toLocaleTimeString();
+        timeDisplay.textContent = formattedTime;
+      }
+
+      setInterval(displayTime, 1000);
+      displayTime();
     </script>
 
     <button id="showWeatherButton">Show Weather</button>
-    <input type="text" id="cityInput" placeholder="Enter city name">
+    <input type="text" id="cityInput" placeholder="Enter city name" />
 
     <div id="weather-container">
-        <h3>Current Weather</h3>
-        <p>City: <span id="city"></span></p>
-        <p>Temperature: <span id="temperature"></span>&deg;C</p>
-        <p>Conditions: <span id="conditions"></span></p>
+      <h3>Current Weather</h3>
+      <p>City: <span id="city"></span></p>
+      <p>Temperature: <span id="temperature"></span>&deg;C</p>
+      <p>Conditions: <span id="conditions"></span></p>
     </div>
     <script src="/websovellus/js/weather.js"></script>
-
-</body>
+  </body>
 </html>
-
-    

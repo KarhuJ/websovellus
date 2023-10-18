@@ -1,67 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/websovellus/css/style.css" rel="stylesheet" type="text/css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/websovellus/css/style.css" rel="stylesheet" type="text/css" />
     <title>Jyri Karhu - CV</title>
     <script>
-        const personalInfo = {
-            name: "Jyri Karhu",
-            email: "jyri.karhu@.com",
-            summary: "A passionate individual with a love for various hobbies and a creative mind.",
-        };
+      const personalInfo = {
+        name: "Jyri Karhu",
+        email: "jyri.karhu@.com",
+        summary:
+          "A passionate individual with a love for various hobbies and a creative mind.",
+      };
 
-        // Function to display the current time
-        function displayTime() {
-            const currentTime = new Date();
-            const hours = currentTime.getHours();
-            const minutes = currentTime.getMinutes();
-            const seconds = currentTime.getSeconds();
-            const timeString = `${hours}:${minutes}:${seconds}`;
-            alert(`Current time is: ${timeString}`);
-        }
+      // Function to display the current time
+      function displayTime() {
+        const currentTime = new Date();
+        const hours = currentTime.getHours();
+        const minutes = currentTime.getMinutes();
+        const seconds = currentTime.getSeconds();
+        const timeString = `${hours}:${minutes}:${seconds}`;
+        alert(`Current time is: ${timeString}`);
+      }
     </script>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1>Jyri Karhu</h1>
-        <button onclick="displayTime()">Time</button> <!-- Button to display current time -->
+      <h1>Jyri Karhu</h1>
+      <button onclick="displayTime()">Time</button>
+      <!-- Button to display current time -->
     </header>
 
     <div class="navbar">
-        <ul>
-            <li><a href="Home.html">Home</a></li>
-            <li><a href="Hobbies.html">Hobbies</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="languages.html">Languages</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+      <ul>
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="Hobbies.html">Hobbies</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="languages.html">Languages</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </div>
 
     <section id="home">
-        <h2>About Me</h2>
-        <p>
-            Hello, I'm <span id="name"></span>. I'm a passionate individual with a love for various hobbies and a creative mind. I have a strong portfolio of projects in different areas and enjoy sharing my experiences through my gallery.
-        </p>
+      <h2>About Me</h2>
+      <p>
+        Hello, I'm <span id="name"></span>. I'm a passionate individual with a
+        love for various hobbies and a creative mind. I have a strong portfolio
+        of projects in different areas and enjoy sharing my experiences through
+        my gallery.
+      </p>
     </section>
     <script>
-        document.getElementById("name").textContent = personalInfo.name;
+      document.getElementById("name").textContent = personalInfo.name;
     </script>
 
+    <button id="showWeatherButton">Show Weather</button>
+    <input type="text" id="cityInput" placeholder="Enter city name" />
 
-<button id="showWeatherButton">Show Weather</button>
-<input type="text" id="cityInput" placeholder="Enter city name">
-
-<div id="weather-container">
-    <h3>Current Weather</h3>
-    <p>City: <span id="city"></span></p>
-    <p>Temperature: <span id="temperature"></span>&deg;C</p>
-    <p>Conditions: <span id="conditions"></span></p>
-</div>
-<script src="/websovellus/js/weather.js"></script>
-
-</body>
+    <div id="weather-container">
+      <h3>Current Weather</h3>
+      <p>City: <span id="city"></span></p>
+      <p>Temperature: <span id="temperature"></span>&deg;C</p>
+      <p>Conditions: <span id="conditions"></span></p>
+    </div>
+    <script src="/websovellus/js/weather.js"></script>
+  </body>
 </html>
-

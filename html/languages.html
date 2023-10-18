@@ -1,76 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/websovellus/css/style.css" rel="stylesheet" type="text/css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/websovellus/css/style.css" rel="stylesheet" type="text/css" />
     <title>Jyri Karhu - CV</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1>Languages</h1>
-        <div id="time-display" class="time-display"></div>
+      <h1>Languages</h1>
+      <div id="time-display" class="time-display"></div>
     </header>
-    
+
     <div class="navbar">
-        <ul>
-            <li><a href="Home.html">Home</a></li>
-            <li><a href="Hobbies.html">Hobbies</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="languages.html">Languages</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+      <ul>
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="Hobbies.html">Hobbies</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="languages.html">Languages</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </div>
 
     <section>
-        <h2>Languages and Skills</h2>
-        <ul id="languagesAndSkillsList"></ul>
+      <h2>Languages and Skills</h2>
+      <ul id="languagesAndSkillsList"></ul>
     </section>
 
     <script>
-        const languagesAndSkills = {
-            languages: "Finnish (Native), English (Fluent)",
-            programmingLanguages: "HTML, CSS, JavaScript, Java",
-            database: "SQL",
-            versionControl: "Git"
-        };
+      const languagesAndSkills = {
+        languages: "Finnish (Native), English (Fluent)",
+        programmingLanguages: "HTML, CSS, JavaScript, Java",
+        database: "SQL",
+        versionControl: "Git",
+      };
 
-        const listContainer = document.getElementById("languagesAndSkillsList");
+      const listContainer = document.getElementById("languagesAndSkillsList");
 
-        for (const key in languagesAndSkills) {
-            if (languagesAndSkills.hasOwnProperty(key)) {
-                const listItem = document.createElement("li");
-                listItem.innerHTML = `<strong>${key}:</strong> ${languagesAndSkills[key]}`;
-                listContainer.appendChild(listItem);
-            }
+      for (const key in languagesAndSkills) {
+        if (languagesAndSkills.hasOwnProperty(key)) {
+          const listItem = document.createElement("li");
+          listItem.innerHTML = `<strong>${key}:</strong> ${languagesAndSkills[key]}`;
+          listContainer.appendChild(listItem);
         }
+      }
     </script>
 
     <script>
-        function displayTime() {
-            const timeDisplay = document.getElementById("time-display");
-            const currentTime = new Date();
-            const formattedTime = currentTime.toLocaleTimeString();
-            timeDisplay.textContent = formattedTime;
-        }
+      function displayTime() {
+        const timeDisplay = document.getElementById("time-display");
+        const currentTime = new Date();
+        const formattedTime = currentTime.toLocaleTimeString();
+        timeDisplay.textContent = formattedTime;
+      }
 
-        setInterval(displayTime, 1000);
-        displayTime();
+      setInterval(displayTime, 1000);
+      displayTime();
     </script>
 
     <button id="showWeatherButton">Show Weather</button>
-    <input type="text" id="cityInput" placeholder="Enter city name">
-
+    <input type="text" id="cityInput" placeholder="Enter city name" />
 
     <div id="weather-container">
-        <h3>Current Weather</h3>
-        <p>City: <span id="city"></span></p>
-        <p>Temperature: <span id="temperature"></span>&deg;C</p>
-        <p>Conditions: <span id="conditions"></span></p>
+      <h3>Current Weather</h3>
+      <p>City: <span id="city"></span></p>
+      <p>Temperature: <span id="temperature"></span>&deg;C</p>
+      <p>Conditions: <span id="conditions"></span></p>
     </div>
     <script src="/websovellus/js/weather.js"></script>
-
-</body>
+  </body>
 </html>
-    
