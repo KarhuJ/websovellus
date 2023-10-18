@@ -94,6 +94,7 @@ ul{
     justify-content: center;
     align-items: center;
     height: 50vh; /* Centers the container vertically on the screen */
+    
 }
 
 section {
@@ -156,4 +157,33 @@ button{
 button:hover{
     background-color: #ddd;
     color: black; 
+}
+
+#weather-container {
+    background-color: #d8d7d700;
+    border: 1px solid #cccccc00;
+    padding: 20px;
+    width: 300px;
+}
+
+#weather-container h3 {
+    font-size: 24px;
+    color: #333;
+}
+
+#city {
+    font-size: 18px;
+    font-weight: bold;
+    color: #555;
+}
+
+#temperature {
+    font-size: 36px;
+    color: #e74c3c;
+}
+
+
+#conditions {
+    font-size: 16px;
+    color: #444;
 }
