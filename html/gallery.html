@@ -22,7 +22,16 @@
             height: auto;
         }
         .pictures:hover {
-            transform: scale(2); /* Scale up the image on hover */
+            animation: zoom 4s; /* 2s zoom in, 2s stay, 2s zoom out */
+        }
+
+        @keyframes zoom {
+            0%, 100% {
+                transform: scale(1);
+            }
+            25%, 75% {
+                transform: scale(2);
+            }
         }
     </style>
     
