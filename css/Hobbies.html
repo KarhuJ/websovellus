@@ -9,6 +9,7 @@
 <body>
     <header>
         <h1>Hobbies</h1>
+        <div id="time-display" class="time-display"></div>
     </header>
 
     <div class="navbar">
@@ -46,5 +47,18 @@
             <td>Playing video games is a fun and immersive pastime.</td>
         </tr>
     </table>
+
+    <script>
+        // Function to update and display the time
+        function displayTime() {
+            const timeDisplay = document.getElementById("time-display");
+            const currentTime = new Date();
+            const formattedTime = currentTime.toLocaleTimeString();
+            timeDisplay.textContent = formattedTime;
+        }
+
+        setInterval(displayTime, 1000);
+        displayTime();
+    </script>
 </body>
 </html>
